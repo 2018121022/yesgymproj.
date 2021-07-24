@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HOME</title>
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .txt01 {
+            position: absolute;
+            width: 400px;
+            height: 90px;
+            left: 20px;
+            top: 90px;
+
+            font-family: Iceberg;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 55px;
+
+            color: #000000; 
+                    }   
+
+            .Group7 {
+            position: absolute;
+            width: 1100px;
+            height: 120px;
+            left: 133px;
+            top: 180px;
+            
+                    }
+            .Group8{
+            position: absolute;
+            width: 1100px;
+            height: 120px;
+            left: 133px;
+            top: 330px;
+            
+            }
+            .Group9{
+            position: absolute;
+            width: 1100px;
+            height: 120px;
+            left: 133px;
+            top: 480px;
+            
+            }
+            .Group10{
+            position: absolute;
+            width: 1100px;
+            height: 120px;
+            left: 133px;
+            top: 630px;
+            
+            }
+            .Group11{
+            position: absolute;
+            width: 1100px;
+            height: 120px;
+            left: 133px;
+            top: 780px;
+            
+            }
+
+        .Rectangle4{
+            position: absolute;
+            left: 0%;
+            right: 7.09%;
+            top: 0%;
+            bottom: 0%;
+            
+            
+            border: 4px solid #0AC9B1;
+            box-sizing: border-box;
+            border-radius: 30px;
+            
+    
+            }
+        .tit0 {
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 12.5%;
+            bottom: 49.17%;
+            
+            font-family: Iceberg;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 37px;
+            
+            color: #000000;
+
+        }
+        .image0 {
+            position: absolute;
+            left: 3.47%;
+            right: 91.8%;
+            top: 12.5%;
+            bottom: 35.83%;
+            
+            background: url(https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg);
+        }
+
+        .id0 {
+            position: absolute;
+            left: 1%;
+            right: 88.97%;
+            top: 66.67%;
+            bottom: 8.33%;
+            
+            font-family: Iceberg;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+
+            color: #000000;
+
+        }
+
+        .notion0{
+            position: absolute;
+            left: 13.52%;
+            right: 10.65%;
+            top: 42.5%;
+            bottom: 32.5%;
+            font-family: Iceberg;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #000000;
+
+        }
+
+        .zoomlink0 {
+            position: absolute;
+            left: 1.82%;
+            right: 19.08%;
+            top: 67.5%;
+            bottom: 12.5%;
+            width: 1100px;
+            font-family: Iceberg;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 24px;
+            z-index: 0;
+            color: #9F9A8F;   
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-sm" style="background-color: #0ac9b1;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">YES GYM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="color: rgb(138, 120, 120);">
+                    {% if user.is_authenticated %}
+                    {{user.username}}님 환영합니다!
+                    {% endif %}
+                     <br>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" aria-current="page" href="{% url 'login' %}">LOG IN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="{% url 'logout' %}">LOG OUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 " href="{% url 'register' %}">SIGN UP</a>
+                        </li>
+      
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="txt01">수업 신청하기</h1>
+    <div class="Group">
+        <a href="{%url 'content' %}"><div class="Group7"> 
+            <div class="zoomlink0">
+                매일 7시 수업, 인원 제한 10명 </div>
+            <div class="notion0">친절하고 깔끔하게 설명해드립니다! 실력으로 보여드리겠습니다</div>
+            <div class="id0">이지현</div>
+            <div class="image0"></div>
+            <div class="tit0">홈트 필라테스 수업 하실 분 모집합니다!</div>
+            <div class="Rectangle4"></div>
+
+        </div></a>
+        <div class="Group8"> 
+            <div class="zoomlink0">
+                매일 8시 수업, 인원 제한 4명 </div>
+            <div class="notion0">초보 분들을 위한 소수 정예 반입니다</div>
+            <div class="id0">김윤조</div>
+            <div class="image0"></div>
+            <div class="tit0">홈 트레이닝 기초부터 탄탄히</div>
+            <div class="Rectangle4"></div>
+
+        </div>
+        <div class="Group9"> 
+            <div class="zoomlink0">
+                매일 6시 수업, 인원 제한 5명 </div>
+            <div class="notion0">헬스 트레이너 10년차 대회 우승 경력 다수 보유</div>
+            <div class="id0">박진효</div>
+            <div class="image0"></div>
+            <div class="tit0">혼자 하는 홈트에 지치신 분들을 위한 일타강사!</div>
+            <div class="Rectangle4"></div>
+
+        </div>
+        <div class="Group10"> 
+            <div class="zoomlink0">
+                매일 9시 수업, 인원 제한 3명 </div>
+            <div class="notion0"> 차근차근 친절하게 설명해드립니다</div>
+            <div class="id0">위서영</div>
+            <div class="image0"></div>
+            <div class="tit0">바르고 곧은 자세를 위한 첫걸음, 기초 요가반입니다 </div>
+            <div class="Rectangle4"></div>
+
+        </div>
+        <div class="Group11"> 
+            <div class="zoomlink0">
+                매일 7시 수업, 인원 제한 20명 </div>
+            <div class="notion0">단체 강의라도 한 명씩 자세히 봐드립니다</div>
+            <div class="id0">아기사자</div>
+            <div class="image0"></div>
+            <div class="tit0">저렴하게 꾸준히 홈트하고 싶으신 분들을 위한 강좌</div>
+            <div class="Rectangle4"></div>
+
+        </div>
+    </div>
+    <ul>
+        {% for gym in gym_comment %}
+            <li>
+                <a href="{% url 'detail' gym.id %}"> 제목 : {{gym.title}}<br></a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

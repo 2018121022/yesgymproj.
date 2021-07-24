@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YESGYM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        main{
+        height: 1600px;
+        background: linear-gradient(white, 70%, #0ac9b1); 
+        margin-top: 14px;
+    
+        }
+        #main1{
+            display: flex;
+        }
+    
+        #main1-1{
+            width: 720px;
+        }
+    
+    
+        img{
+            padding-top: 170px;
+            padding-left: 100px;
+    
+        }
+    
+        #main1 .des-box{
+        margin: 14px 50px 75px 90px;
+        padding-top: 90px;
+        padding-left: 50px;
+        }
+        .korean{
+            font-size: 35px;
+            line-height: 60px;
+     
+        }
+        .yes-gym{
+            font-size: 65px;
+            padding-top: 40px;
+            color: rgb(17, 141, 114);
+        }
+    
+        div .home-buttons{
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            padding-left: 60px;
+            padding-top: 80px;
+        }
+    
+        .go-lesson{
+            width: 328px;
+            height: 76px;
+            border-radius: 20px;
+            margin-left: 100px;
+            background-color: rgb(17, 141, 114);
+            color: white;
+            border-color: none;
+        }
+    
+        .community{
+            width: 328px;
+            height: 76px;
+            border-radius: 20px;
+            margin-left: 100px;
+            margin-top: 30px;
+            background-color: rgb(17, 141, 114);
+            color: white;
+            border-color: none;
+    
+    
+    
+        }
+    
+    
+        @font-face {
+        font-family: 'GongGothicMedium';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+    
+        *{
+            font-family: 'GongGothicMedium';
+        }
+    
+        #main2{
+            margin-top: 30px;
+    
+            height: 800px;
+        }
+    
+        .function{
+            padding-top: 120px;
+        }
+    
+        .function-3{
+            font-size: 50px;
+            text-align: center;
+        }
+        .you-can{
+            font-size: 30px;
+            text-align: center;
+            color: gray;
+        }
+    
+        .function-detail{
+            display: flex;
+            font-size: 25px;
+            color: rgb(23, 66, 23);
+    
+        
+        }
+    
+        .time-des{
+        margin-left: 100px;
+        margin-top: 20px;
+
+    }
+
+    .posture-des{
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .com-des{
+        margin-left: 110px;
+        margin-top: 20px;
+    }
+    
+    </style>
+</head>
+<body style="text-align: center;">
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-sm" style="background-color: #0ac9b1;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">YES GYM</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="color: rgb(138, 120, 120);">
+                    {% if user.is_authenticated %}
+                    {{user.username}}님 환영합니다!
+                    {% endif %}
+                     <br>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" aria-current="page" href="{% url 'login' %}">LOG IN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="{% url 'logout' %}">LOG OUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 " href="{% url 'register' %}">SIGN UP</a>
+                        </li>
+      
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main1">
+            <div id="main1-1">
+                <div class="des-box">
+                    <p class="korean">비대면 홈트레이닝 플랫폼<br>FROM 1999</p>
+                    <p class="yes-gym">YES GYM</p>
+                </div>
+                <div class="home-buttons">
+                    <a href="{% url 'lesson'%}"><button class="go-lesson">수업 받으러 가기</button></a>
+                    <a href="{% url 'comment'%}"><button class="community">예스짐 커뮤니티</button></a>
+                </div>
+            </div>
+            <div id="main1-2">
+                <img src="https://en.pimg.jp/066/301/335/1/66301335.jpg" alt="image" width="600px" height="700px">
+            </div>
+            
+        </div>
+        <div id="main2">
+            <div class="function">
+                <p class = "function-3" >YES GYM의 3가지 기능</p>
+                <p class= "you-can">YOU CAN MAKE BETTER LIFE STYLE <br>WITH YES GYM</p>
+            </div>
+            <div class="function-detail">
+                <div class="article1">
+                    <img src="https://en.pimg.jp/024/458/519/1/24458519.jpg" alt="time" width="400px" height="400px"> 
+                    <p class="time-des" >규칙적인 운동</p>
+
+                </div>
+                <div class="article2">
+                    <img src="https://i.pinimg.com/originals/de/a4/0b/dea40bd9db8134668686d10953b51031.png" alt="posture" width="400px" height="400px" >
+                    <p class="posture-des">올바른 운동</p>
+                </div>
+
+                <div class="article3">
+                    <img src="https://previews.123rf.com/images/yupiramos/yupiramos1509/yupiramos150912155/45719186-community-and-social-design-vector-illustration-eps-10.jpg" alt="communityimg"width="400px" height="400px" >
+                    <p class="com-des">운동 습관 공유</p>
+                </div>
+
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+    
+</body>
+</html>
